@@ -547,9 +547,7 @@ namespace Playnite.Controllers
                                 }
                             }
 
-                            // TODO switch to WatchUwpApp once we are building as 64bit app
-                            //procMon.WatchUwpApp(uwpMatch.Groups[1].Value, false);
-                            var monitor = new MonitorProcessNames(scanDirectory);
+                            var monitor = new MonitorDirectory(scanDirectory);
                             if (monitor.IsTrackable())
                             {
                                 StartTracking(
